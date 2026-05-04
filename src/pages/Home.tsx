@@ -202,7 +202,7 @@ export default function Home() {
                 </div>
                 <div className={styles.introRow}>
                   <dt>좌우명</dt>
-                  <dd className={styles.introMotto}>진심성선</dd>
+                  <dd className={styles.introMotto}>모든 일에 진심을 다하자</dd>
                 </div>
               </dl>
             </div>
