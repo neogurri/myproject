@@ -1,0 +1,121 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 45%, #f1f5f9 100%);
+  padding: 1.5rem 1.5rem 4rem;
+  color: #0f172a;
+}
+
+.header {
+  max-width: 640px;
+  margin: 0 auto 2rem;
+}
+
+.back {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(15, 23, 42, 0.72);
+  text-decoration: none;
+}
+
+.back:hover {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.article {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  color: #1d4ed8;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.65;
+}
+
+.title {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.45;
+  color: #0c1929;
+}
+
+.figure {
+  margin: 0 0 1.5rem;
+}
+
+.detailPhoto {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  box-shadow: 0 10px 28px rgba(37, 99, 235, 0.12);
+}
+
+/* 본문 한 단락 높이를 넘지 않도록 세로 크기 상한 */
+.photoStrip {
+  margin: 0 0 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 2px;
+  border-radius: 12px;
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  box-shadow: 0 10px 28px rgba(37, 99, 235, 0.12);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-color: rgba(37, 99, 235, 0.45) rgba(37, 99, 235, 0.08);
+}
+
+.photoStripTrack {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0.65rem;
+  width: max-content;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.photoStripImg {
+  display: block;
+  flex: 0 0 auto;
+  height: min(11rem, 22ex);
+  width: auto;
+  max-height: min(11rem, 22ex);
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.body {
+  font-size: 1.05rem;
+  line-height: 1.95;
+  color: #0f172a;
+  opacity: 0.94;
+}
+
+.body p {
+  margin: 0 0 1.45rem;
+  text-align: justify;
+  word-break: keep-all;
+  line-height: inherit;
+}
+
+.body p:last-child {
+  margin-bottom: 0;
+}
+
+/* 영국국제학교 · 상해한국학교 · 현재: 문단 너비는 유지, 가로 스트립 사진만 세로로 확대 */
+.page[data-period="bis"] .photoStripImg,
+.page[data-period="teen"] .photoStripImg,
+.page[data-period="present"] .photoStripImg {
+  height: min(17.5rem, 40ex);
+  max-height: min(17.5rem, 40ex);
+  border-radius: 10px;
+}

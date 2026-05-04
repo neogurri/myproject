@@ -1,0 +1,41 @@
+:root {
+  --bg: #f0f9ff;
+  --fg: #0f172a;
+  --muted: #475569;
+  --line: #93c5fd;
+  --accent: #1d4ed8;
+  --accent-soft: rgba(29, 78, 216, 0.18);
+  --shadow: 0 12px 40px rgba(29, 78, 216, 0.14);
+  font-family: "Noto Sans KR", system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--fg);
+  background-color: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

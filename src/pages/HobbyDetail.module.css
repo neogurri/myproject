@@ -1,0 +1,67 @@
+/* 상세 페이지(.page) 하단 톤(#f1f5f9)과 이어지도록 이미지 하단을 마스크로 페이드 */
+.footerFigure {
+  margin: 2rem 0 0;
+  padding: 0;
+  border: none;
+}
+
+.fadeImageRow {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.fadeImageRowPair {
+  align-items: flex-start;
+}
+
+.fadeImageCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.fadeImageWrap {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
+  background: #f1f5f9;
+}
+
+.fadeImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 40%,
+    rgba(0, 0, 0, 0.65) 58%,
+    rgba(0, 0, 0, 0.2) 78%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 40%,
+    rgba(0, 0, 0, 0.65) 58%,
+    rgba(0, 0, 0, 0.2) 78%,
+    transparent 100%
+  );
+}
+
+.fadeImage.fadeImageCropFit {
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: top center;
+}
+
+@media (max-width: 560px) {
+  .fadeImageRow {
+    flex-direction: column;
+  }
+}
